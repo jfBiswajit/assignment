@@ -7,9 +7,6 @@
 [Linkedin](https://www.linkedin.com/in/jfbiswajit), [GitHub](https://github.com/jfBiswajit), [Twitter](https://twitter.com/jfBiswajit), [StackOverflow](https://stackoverflow.com/users/11703105/biswajit-biswas) 
 
 ## Installation
-- Create a database named `assignment`
-
-## Installation
 - Git clone: `git clone https://github.com/jfBiswajit/assignment`
 - Run: `composer install`
 - Rename `.env.example` file to `.env`
