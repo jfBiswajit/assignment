@@ -1,6 +1,5 @@
 @extends('layouts.header')
 @section('content')
-<div class="mt-3">
   <div class="card-deck">
   @foreach ($products as $product)
   <div class="card">
@@ -18,6 +17,5 @@
     </div>
   </div>
   @endforeach
-</div>
 </div>
 @endsection

@@ -16,7 +16,7 @@
 
 <body>
   @include('layouts.navigation')
-  <div class="container-fluid">
+  <div class="container-fluid mt-3">
     @yield('content')
   </div>
 

@@ -15,7 +15,8 @@ class ProductController extends Controller
     return view('proucts.index', compact('products'));
   }
   
-  public function show($productId) {
-    dd($productId);
+  public function show(ProductAction $productAction, $productId) {
+    $product = $productAction->getProduct($productId);
+    return view('proucts.show', ['product' => $product]);
   }
 }
