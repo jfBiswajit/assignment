@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Card\CardController;
 use App\Http\Controllers\Product\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,5 +25,9 @@ Route::group(['middleware' => 'auth'], function () {
   Route::group(['prefix' => 'product', 'as' => 'product.'], function () {
     Route::get('/', [ProductController::class, 'index'])->name('index');
     Route::get('/{productId}', [ProductController::class, 'show'])->name('show');
+  });
+  
+  Route::group(['prefix' => 'card', 'as' => 'card.'], function () {
+    Route::get('/{productId}', [CardController::class, 'add'])->name('add');
   });
 });
