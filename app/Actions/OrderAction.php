@@ -14,7 +14,7 @@ class OrderAction
 
     foreach ($cardItem as $item) {
       $order = new Order();
-      
+
       $order->user_id = Auth::user()->id;
       $order->product_id = $item->product_id;
       $order->title = $item->title;
@@ -26,5 +26,10 @@ class OrderAction
     }
 
     session()->forget('card');
+  }
+
+  public function getPlacedOrders()
+  {
+    return  Order::with('orderBy')->where('user_id', Auth::user()->id)->get();
   }
 }

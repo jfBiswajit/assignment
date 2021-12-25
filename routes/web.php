@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
   });
   
   Route::group(['prefix' => 'order', 'as' => 'order.'], function () {
+    Route::get('/', [OrderController::class, 'index'])->name('index');
     Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
   });
 });

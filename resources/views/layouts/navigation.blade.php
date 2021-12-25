@@ -14,6 +14,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{ route('card.index') }}">Card</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ route('order.index') }}">Orders</a>
+      </li>
     </ul>
   </div>
 </nav>

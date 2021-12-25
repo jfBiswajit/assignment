@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  public function orderBy()
+  {
+    return $this->belongsTo(User::class, 'user_id');
+  }
 }
