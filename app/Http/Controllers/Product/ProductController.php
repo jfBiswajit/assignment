@@ -12,5 +12,6 @@ class ProductController extends Controller
   public function index(ProductAction $productAction)
   {
     $products = $productAction->getProducts();
+    return view('proucts.index', compact('products'));
   }
 }
