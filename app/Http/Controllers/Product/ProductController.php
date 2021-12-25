@@ -12,12 +12,12 @@ class ProductController extends Controller
   public function index(ProductAction $productAction)
   {
     $products = $productAction->getProducts();
-    return view('proucts.index', compact('products'));
+    return view('products.index', compact('products'));
   }
 
   public function show(ProductAction $productAction, $productId)
   {
     $product = $productAction->getProduct($productId);
-    return view('proucts.show', ['product' => $product]);
+    return view('products.show', ['product' => $product]);
   }
 }

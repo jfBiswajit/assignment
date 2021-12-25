@@ -28,6 +28,7 @@ Route::group(['middleware' => 'auth'], function () {
   });
   
   Route::group(['prefix' => 'card', 'as' => 'card.'], function () {
+    Route::get('/', [CardController::class, 'index'])->name('index');
     Route::get('/{productId}', [CardController::class, 'add'])->name('add');
   });
 });
