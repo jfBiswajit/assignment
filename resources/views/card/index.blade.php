@@ -21,6 +21,6 @@
     @endforeach
   </tbody>
 </table>
-<a href="#" class="btn btn-success btn-block">Checkout</a>
+<a href="#" class="btn btn-success btn-block my-2">Checkout</a>
 </div>
 @endsection
