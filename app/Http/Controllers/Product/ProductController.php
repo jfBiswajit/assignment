@@ -14,8 +14,9 @@ class ProductController extends Controller
     $products = $productAction->getProducts();
     return view('proucts.index', compact('products'));
   }
-  
-  public function show(ProductAction $productAction, $productId) {
+
+  public function show(ProductAction $productAction, $productId)
+  {
     $product = $productAction->getProduct($productId);
     return view('proucts.show', ['product' => $product]);
   }
