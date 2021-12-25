@@ -16,7 +16,9 @@
 
 <body>
   @include('layouts.navigation')
-  @yield('content')
+  <div class="container-fluid">
+    @yield('content')
+  </div>
 
   <!-- Optional JavaScript; choose one of the two! -->
 

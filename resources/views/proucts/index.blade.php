@@ -1,6 +1,7 @@
 @extends('layouts.header')
 @section('content')
-<div class="card-deck">
+<div class="mt-3">
+  <div class="card-deck">
   @foreach ($products as $product)
   <div class="card">
     <img class="card-img-top" src="{{ $product->image_url }}" alt="Card image cap">
@@ -13,9 +14,10 @@
       </p>
     </div>
     <div class="card-footer">
-      <a href="#" class="btn btn-success btn-block">Details</a>
+      <a href="{{ route('product.show', ['productId' => $product->product_id]) }}" class="btn btn-success btn-block">Details</a>
     </div>
   </div>
   @endforeach
+</div>
 </div>
 @endsection
