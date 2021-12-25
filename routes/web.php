@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Card\CardController;
+use App\Http\Controllers\Order\OrderController;
 use App\Http\Controllers\Product\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,9 @@ Route::group(['middleware' => 'auth'], function () {
   Route::group(['prefix' => 'card', 'as' => 'card.'], function () {
     Route::get('/', [CardController::class, 'index'])->name('index');
     Route::get('/{productId}', [CardController::class, 'add'])->name('add');
+  });
+  
+  Route::group(['prefix' => 'order', 'as' => 'order.'], function () {
+    Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
   });
 });
