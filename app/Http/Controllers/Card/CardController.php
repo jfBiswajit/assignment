@@ -20,6 +20,6 @@ class CardController extends Controller
   {
     $product = $productAction->getProduct($productId);
     $cardAction->addToCard($product);
-    return redirect()->back()->with(['msg' => 'Successfully added to the card!']);
+    return redirect()->route('dashboard')->with(['msg' => 'Successfully added to the card!']);
   }
 }
