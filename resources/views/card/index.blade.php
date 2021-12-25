@@ -11,12 +11,14 @@
     </tr>
   </thead>
   <tbody>
-    @foreach ($cardItems as $item)
+    @foreach ($cardItems as $key => $item)
     <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+      <td>{{ ++$key }}</td>
+      <td>{{ $item->title }}</td>
+      <td>
+        <img style="height: 50px; width: 60px;" src="{{ $item->image_url }}" alt="">
+      </td>
+      <td>{{ $item->price }}</td>
     </tr>
     @endforeach
   </tbody>
