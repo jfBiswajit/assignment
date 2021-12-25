@@ -11,7 +11,6 @@ class CardController extends Controller
 {
   public function index()
   {
-    // session()->flush();
     $cardItems = session('card') ?? [];
     return view('card.index', ['cardItems' => $cardItems]);
   }
